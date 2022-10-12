@@ -214,4 +214,59 @@ body {
     width: 40%;
 } .sub-head-sk {
     color:white;
+} .sv {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 7em;
+} .sv > div {
+    border: 1px solid #4bb5f5;
+    width: 25%;
+    border-radius: 0 0 35px 35px;
+    background-color: rgba(41,43,102,1);
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    height: fit-content;
+} .sv > div:hover {
+    background-color: rgba(41,43,102,0);
+}.sv-head {
+    background-color: #4bb5f5;
+    color: rgba(41,43,102,1);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 5em;
+    border-radius: 0 0 35px 35px;
+
+} .sv > div > div {
+    padding: 1em 2em;
+    color: white;
+    display: flex;
+    align-items: center;
+} .fix-nav {
+    cursor: pointer;
+    position: fixed;
+    bottom: 1em;
+    left: 43.5%;
+    background-color: #0f101c;
+    display: flex;
+    border-radius: 50px;
+    padding: .5em 1em;
+    gap: .5em;
+
+} .fix-nav > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5em;
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 50%;
+    background-color: rgba(23,23,41,0);
+    transition: all .4s ease-in-out;
+
+} .fix-nav > span:hover {
+    background-color: rgba(23,23,41,255);
+} .fix-nav a {
+    color: white;
 }

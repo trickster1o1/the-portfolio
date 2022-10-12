@@ -1,4 +1,4 @@
-import {useEffect} from 'react';
+import {useState} from 'react';
 import Contact from './Contact';
 import './main.css';
 import { RiGithubFill, RiLinkedinBoxFill,RiGitlabLine} from "react-icons/ri";
@@ -6,11 +6,13 @@ import me from './me.png';
 import cv from './cv.pdf';
 import About from './About';
 import Skill from './Skill';
+import Services from './Services';
+import { BsPersonCircle, BsFillHouseFill,BsFillBarChartLineFill,BsServer,BsFillPersonLinesFill } from "react-icons/bs";
 function Home() {
-
+	const [location, setLocation] = useState('home');
 	return(
 		<>
-		<div className='main-cont top-cont'>
+		<div className='main-cont top-cont' id='home'>
 				<span>Hello, I'm</span>
 				<h2>Nischal Tuladhar</h2>
 				<span className='fade-text'>Fullstack Developer</span>
@@ -39,7 +41,16 @@ function Home() {
 
 		<About />
 		<Skill />
+		<Services />
 		<Contact />
+
+		<div className='fix-nav'>
+			<span style={{'backgroundColor': location === 'home' ? 'rgba(23,23,41,255)' : 'rgba(23,23,41,0)'}} ><a href='#home' onClick={()=>setLocation('home')}><BsFillHouseFill size={'1.5em'}/></a></span>
+			<span style={{'backgroundColor': location === 'about' ? 'rgba(23,23,41,255)' : 'rgba(23,23,41,0)'}} ><a href='#about' onClick={()=>setLocation('about')}><BsPersonCircle size={'1.5em'}/></a></span>
+			<span style={{'backgroundColor': location === 'exp' ? 'rgba(23,23,41,255)' : 'rgba(23,23,41,0)'}} ><a href='#exp' onClick={()=>setLocation('exp')}><BsFillBarChartLineFill size={'1.5em'}/></a></span>
+			<span style={{'backgroundColor': location === 'serv' ? 'rgba(23,23,41,255)' : 'rgba(23,23,41,0)'}} ><a href='#serv'  onClick={()=>setLocation('serv')}><BsServer size={'1.5em'}/></a></span>
+			<span style={{'backgroundColor': location === 'contact' ? 'rgba(23,23,41,255)' : 'rgba(23,23,41,0)'}} ><a href='#contact'  onClick={()=>setLocation('contact')}><BsFillPersonLinesFill size={'1.5em'}/></a></span>
+		</div>
 		</>
 		
 		);

@@ -1,7 +1,7 @@
 import { HiBadgeCheck } from "react-icons/hi";
 export default function Skill() {
     return (
-        <div className="main-cont contact about">
+        <div className="main-cont contact about" id="exp">
         <span>What Skills I Have</span>
         <h2 style={{'marginBottom':'1em'}}>My Experience</h2>
         <div className="abt-cont">
