@@ -5,7 +5,7 @@ import { BsFillPeopleFill } from "react-icons/bs";
 import { GoProject } from "react-icons/go";
 export default function About() {
     return (
-        <div className="main-cont contact about" id='about'>
+        <div className="main-cont contact about desktop">
             <span>Get To Know</span>
             <h2 style={{'marginBottom':'1em'}}>About Me</h2>
             <div className="abt-cont">
