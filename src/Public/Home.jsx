@@ -39,17 +39,38 @@ function Home() {
           </span>
         </div>
         <span className="b-media">
-          <RiGithubFill
-            style={{ color: "rgba(98,148,185,255)", marginBottom: "1em" }}
-          />{" "}
+          <a
+            href="https://github.com/trickster1o1"
+            target="_blank"
+            rel="noreferrer"
+            title="Github"
+          >
+            <RiGithubFill
+              style={{ color: "rgba(98,148,185,255)", marginBottom: "1em" }}
+            />
+          </a>{" "}
           <br />
-          <RiLinkedinBoxFill
-            style={{ color: "rgba(98,148,185,255)", marginBottom: "1em" }}
-          />{" "}
+          <a
+            href="https://www.linkedin.com/in/nischal-tuladhar-4b7325226/"
+            target="_blank"
+            rel="noreferrer"
+            title="LinkedIn"
+          >
+            <RiLinkedinBoxFill
+              style={{ color: "rgba(98,148,185,255)", marginBottom: "1em" }}
+            />
+          </a>{" "}
           <br />
-          <RiGitlabLine
-            style={{ color: "rgba(98,148,185,255)", marginBottom: "1em" }}
-          />{" "}
+          <a
+            href="https://gitlab.com/nischal.tuladhar"
+            target="_blank"
+            rel="noreferrer"
+            title="Gitlab"
+          >
+            <RiGitlabLine
+              style={{ color: "rgba(98,148,185,255)", marginBottom: "1em" }}
+            />
+          </a>{" "}
           <br />
           <span>
             <hr style={{ transform: "rotate(90deg)" }} />

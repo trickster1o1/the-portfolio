@@ -357,4 +357,11 @@ body {
         }
         
 }
+
+@media only screen and (max-width: 1665px) {
+    #serv, #exp, #about, #contact {
+        margin-top: 10em;
+    }
+}
+
   

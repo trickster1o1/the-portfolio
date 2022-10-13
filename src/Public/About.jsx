@@ -1,5 +1,4 @@
 import pp from './qwe.jpg';
-import { RiFacebookBoxLine, RiInstagramLine } from "react-icons/ri";
 import { TbBadge } from "react-icons/tb";
 import { BsFillPeopleFill } from "react-icons/bs";
 import { GoProject } from "react-icons/go";
