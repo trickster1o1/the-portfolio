@@ -61,7 +61,7 @@ function Home() {
       </div>
       <div id="about">
         <About />
-        <AboutMobile />
+        <AboutMobile /> {/* Mobile Manipulation */}
       </div>
       <Skill />
       <Services />
