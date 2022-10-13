@@ -37,12 +37,13 @@ body {
     min-height: 5em;
     justify-content: space-around;
     align-items: center;
-} .sub-cont > div{
+} .sub-cont > div , .sub-cont form{
     display: flex;
     flex-direction: column;
     gap: 1em;
 
 } .contacts {
+    cursor: pointer;
     height: 11em;
     width: 15em;
     background-color:rgba(41,43,102,255);
@@ -70,6 +71,9 @@ body {
     height: 100%;
     flex-grow: 1;
     padding-left: 5%;
+} form {
+    flex-grow: 1;
+
 } .sub-cont input, textarea{
     width: 45%;
     background-color: rgba(0, 0, 0, 0);
@@ -287,10 +291,33 @@ body {
     padding: .5em;
     margin-bottom: -1em;
     
+} .skill-mob {
+    width: 100%;
+    padding-top: 5em;
+} .skill-mob > div {
+    padding-left: 1em;
+    width: 100%;
+} .skill-mob h5.head-sk {
+    text-align: center;
+}.sv-mob {
+    padding: 0 .5em;
+} .sv-mob > div > div{
+    border: 1px solid #4bb5f5;
+            width: 95vw;
+            border-radius: 0 0 35px 35px;
+            background-color: rgba(41,43,102,1);
+            transition: all .5s ease-in-out;
+            cursor: pointer;
+            height: fit-content;
+}.sv-mob > div > div > div > div {
+    padding: 1em 2em;
+    color: white;
+    display: flex;
+    align-items: center;
 }
 
 
-
+/* Mobile css */
 @media only screen and (max-width: 1000px) {
         .main-cont{
             min-height: 100vh;
@@ -303,7 +330,31 @@ body {
             display: none;
         } .mobile {
             display: flex;
-        }.exp > span {
+        }.mobile .sv {
+            display: block;
+            padding: 0;
+        }.mobile .sv > div {
+            border: 1px solid #4bb5f5;
+            width: 95vw;
+            border-radius: 0 0 35px 35px;
+            background-color: rgba(41,43,102,1);
+            transition: all .5s ease-in-out;
+            cursor: pointer;
+            height: fit-content;
+        } .sub-cont {
+            flex-direction: column;
+        } .sub-cont > div:nth-child(1) {
+            display: none;
+        }.sub-cont > div:nth-child(2) {
+            height: 100%;
+            flex-grow: 1;
+            padding-left: 5%;
+            width: 100%;
+        }.sub-cont > div:nth-child(2) input , .sub-cont > div:nth-child(2) textarea {
+            width: 90%;
+        }.sub-cont > div:nth-child(2) button {
+            width: fit-content;
         }
+        
 }
   
