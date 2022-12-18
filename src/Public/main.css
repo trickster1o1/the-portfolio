@@ -339,6 +339,11 @@ body {
             top: 92vh;
             bottom:unset;
         } */
+        .scroller {
+            display: none;
+        } .b-media {
+            display: none;
+        }
          .desktop {
             display: none;
         } .mobile {

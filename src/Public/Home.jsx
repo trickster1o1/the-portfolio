@@ -15,10 +15,12 @@ import {
   BsFillPersonLinesFill,
 } from "react-icons/bs";
 import AboutMobile from "./AboutMobile";
+import Welcome from "./Welcome";
 function Home() {
   const [location, setLocation] = useState("home");
   return (
     <>
+      <Welcome />
       <div className="main-cont top-cont" id="home">
         <span>Hello, I'm</span>
         <h2>Nischal Tuladhar</h2>
