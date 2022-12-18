@@ -87,8 +87,8 @@ function Home() {
       <Skill />
       <Services />
       <Contact />
-
-      <div className="fix-nav">
+<div className="nav-cont">
+<div className="fix-nav">
         <span
           style={{
             backgroundColor:
@@ -142,6 +142,8 @@ function Home() {
           </a>
         </span>
       </div>
+</div>
+      
     </>
   );
 }

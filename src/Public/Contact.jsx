@@ -4,11 +4,19 @@ import emailjs from 'emailjs-com';
 import { useState } from "react";
 export default function Contact() {
     const [msg,setMsg] = useState('');
+    const [error,setError] = useState('');
+    const [data,setData] = useState({});
     const contactMe = (e) => {
         e.preventDefault();
-        emailjs.sendForm('gmail','template_yd2umv6',e.target,'cioMD6HpOHdTxNtsC')
-        .then(r=>{console.log(r);e.target.reset(); setMsg('Thank You For Contacting')})
-        .catch(e=>console.log(e));
+        if(!data.name || !data.email || !data.msg) {
+            setError('Please fill all the fields');
+        } else {
+            setError('');
+             emailjs.sendForm('gmail','template_yd2umv6',e.target,'cioMD6HpOHdTxNtsC')
+            .then(r=>{console.log(r);e.target.reset(); setMsg('Thank You For Contacting')})
+            .catch(e=>console.log(e));
+        }
+       
     }
     return (
         <div className="main-cont contact" id='contact'>
@@ -52,10 +60,10 @@ export default function Contact() {
                 </div>
                 <div>
                     <form onSubmit={contactMe}>
-                    <input type="text" name = 'name' placeholder="Your Name"  />
-                    <input type="email" name = 'email' placeholder="Your Email"  />
-                    <textarea cols="30" name='msg' rows="5" placeholder="Your Message"></textarea>
-                    {msg ? <small>{msg}</small> : null}
+                    <input type="text" name = 'name' placeholder="Your Name" onChange={(e)=>setData({...data, 'name':e.target.value})}  />
+                    <input type="email" name = 'email' placeholder="Your Email"  onChange={(e)=>setData({...data, 'email':e.target.value})} />
+                    <textarea cols="30" name='msg' rows="5" placeholder="Your Message"  onChange={(e)=>setData({...data, 'msg':e.target.value})}></textarea>
+                    {msg ? <small>{msg}</small> : error ? <small>{error}</small> : null}
                     <button>Send Message</button>
                     </form>
                 </div>
