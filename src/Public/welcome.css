@@ -52,13 +52,13 @@
                 position: absolute;
                 top: 51.8%;
             } 
-            /* responsiveness for shitty foldables */
+            /* responsiveness for shitty foldable */
             @media only screen and (max-width: 700px) {
                 .welcome-screen > div {
                     font-size: 15pt;
                 }.txt-block {
                     position: absolute;
-                    top: 51.5%;
+                    top: 51%;
                 } 
             }
         }
