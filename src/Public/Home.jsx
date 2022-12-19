@@ -7,6 +7,8 @@ import cv from "./cv.pdf";
 import About from "./About";
 import Skill from "./Skill";
 import Services from "./Services";
+import scrlEff from './ls.mp3';
+
 import {
   BsPersonCircle,
   BsFillHouseFill,
@@ -17,7 +19,9 @@ import {
 import AboutMobile from "./AboutMobile";
 import Welcome from "./Welcome";
 function Home() {
+  let audio = new Audio(scrlEff);
   const [location, setLocation] = useState("home");
+
   return (
     <>
       <Welcome />
@@ -29,7 +33,7 @@ function Home() {
           <a href={cv} className="btnA" download>
             <button>Download CV</button>
           </a>
-          <a href="#contact" className="btn-link">
+          <a href="#contact" className="btn-link" onClick={()=>audio.play()}>
             <button>Let's Talk</button>
           </a>
         </div>
@@ -79,7 +83,7 @@ function Home() {
           </span>
         </span>
         <span className="scroller">
-          <a href="#contact">Scroll Down</a>
+          <a href="#contact" onClick={()=>audio.play()}>Scroll Down</a>
         </span>
       </div>
       <div id="about">
@@ -97,7 +101,7 @@ function Home() {
               location === "home" ? "rgba(23,23,41,255)" : "rgba(23,23,41,0)",
           }}
         >
-          <a href="#home" onClick={() => setLocation("home")}>
+          <a href="#home" onClick={() => {setLocation("home");}}>
             <BsFillHouseFill size={"1.5em"} />
           </a>
         </span>
@@ -107,7 +111,7 @@ function Home() {
               location === "about" ? "rgba(23,23,41,255)" : "rgba(23,23,41,0)",
           }}
         >
-          <a href="#about" onClick={() => setLocation("about")}>
+          <a href="#about" onClick={() => {setLocation("about");}}>
             <BsPersonCircle size={"1.5em"} />
           </a>
         </span>
@@ -117,7 +121,7 @@ function Home() {
               location === "exp" ? "rgba(23,23,41,255)" : "rgba(23,23,41,0)",
           }}
         >
-          <a href="#exp" onClick={() => setLocation("exp")}>
+          <a href="#exp" onClick={() => {setLocation("exp");}}>
             <BsFillBarChartLineFill size={"1.5em"} />
           </a>
         </span>
@@ -127,7 +131,7 @@ function Home() {
               location === "serv" ? "rgba(23,23,41,255)" : "rgba(23,23,41,0)",
           }}
         >
-          <a href="#serv" onClick={() => setLocation("serv")}>
+          <a href="#serv" onClick={() => {setLocation("serv");}}>
             <BsServer size={"1.5em"} />
           </a>
         </span>
@@ -139,7 +143,7 @@ function Home() {
                 : "rgba(23,23,41,0)",
           }}
         >
-          <a href="#contact" onClick={() => setLocation("contact")}>
+          <a href="#contact" onClick={() => {setLocation("contact");}}>
             <BsFillPersonLinesFill size={"1.5em"} />
           </a>
         </span>
