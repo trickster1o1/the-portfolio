@@ -1,7 +1,9 @@
 import { useState } from "react";
 import Contact from "./Contact";
 import "./main.css";
-import { RiGithubFill, RiLinkedinBoxFill, RiGitlabLine } from "react-icons/ri";
+import { RiGithubFill, RiLinkedinBoxFill } from "react-icons/ri";
+import { FaBlogger} from "react-icons/fa";
+
 import me from "./me.png";
 import cv from "./cv.pdf";
 import About from "./About";
@@ -68,12 +70,12 @@ function Home() {
           </a>{" "}
           <br />
           <a
-            href="https://gitlab.com/nischal.tuladhar"
+            href="https://tricksterblog1o1.wordpress.com"
             target="_blank"
             rel="noreferrer"
             title="Gitlab"
           >
-            <RiGitlabLine
+            <FaBlogger
               style={{ color: "rgba(98,148,185,255)", marginBottom: "1em" }}
             />
           </a>{" "}
