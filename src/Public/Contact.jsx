@@ -25,7 +25,7 @@ export default function Contact() {
             <div className="sub-cont">
                 <div className="smedia-mob">
                     <span className="contacts" onClick={()=>{document.getElementById('mail').click()}}>
-                        <a href="mailto:nischaltuladhar15@gmail.com" target='_blank' style={{'display':'none'}} id='mail'></a>
+                        <a href="mailto:nischaltuladhar15@gmail.com" rel="noreferrer" target='_blank' style={{'display':'none'}} id='mail'></a>
                         <AiOutlineMail size={'1.5em'}/>
                             Email
                         <span>
@@ -36,7 +36,7 @@ export default function Contact() {
                         </span>
                     </span>
                     <span className="contacts" onClick={()=>{document.getElementById('fb').click()}}>
-                        <a href="https://www.facebook.com/trickster1o1" target='_blank' style={{'display':'none'}} id='fb'></a>
+                        <a href="https://www.facebook.com/trickster1o1" target='_blank' rel="noreferrer" style={{'display':'none'}} id='fb'></a>
                         <RiFacebookBoxLine size={'1.5em'}/>
                             Facebook
                         <span>
@@ -47,7 +47,7 @@ export default function Contact() {
                         </span>
                     </span>
                     <span className="contacts" onClick={()=>{document.getElementById('ig').click()}}>
-                        <a href="https://www.instagram.com/_trick5t3r_/" target='_blank' style={{'display':'none'}} id='ig'></a>
+                        <a href="https://www.instagram.com/_trick5t3r_/" target='_blank' rel="noreferrer" style={{'display':'none'}} id='ig'></a>
                     <RiInstagramLine size={'1.5em'}/>
                             Instagram
                         <span>
