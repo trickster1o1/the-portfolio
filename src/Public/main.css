@@ -325,6 +325,8 @@ body {
     color: white;
     display: flex;
     align-items: center;
+} .m-media {
+    display: none;
 }
 
 
@@ -373,7 +375,9 @@ body {
         }.sub-cont > div:nth-child(2) button {
             width: fit-content;
         }
-        
+        .m-media {
+            display: block;
+        }
 }
 
 @media only screen and (max-width: 1665px) {

@@ -2,14 +2,14 @@ import { useState } from "react";
 import Contact from "./Contact";
 import "./main.css";
 import { RiGithubFill, RiLinkedinBoxFill } from "react-icons/ri";
-import { FaBlogger} from "react-icons/fa";
+import { FaBlogger } from "react-icons/fa";
 
 import me from "./me.png";
 import cv from "./cv.pdf";
 import About from "./About";
 import Skill from "./Skill";
 import Services from "./Services";
-import scrlEff from './ls.mp3';
+import scrlEff from "./ls.mp3";
 
 import {
   BsPersonCircle,
@@ -31,11 +31,41 @@ function Home() {
         <span>Hello, I'm</span>
         <h2>Nischal Tuladhar</h2>
         <span className="fade-text">Fullstack Developer</span>
+
+        <div className="m-media">
+          <a
+            href="https://github.com/trickster1o1"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <RiGithubFill size={'1.8em'}
+              style={{ color: "rgba(98,148,185,255)"}}
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/nischal-tuladhar-4b7325226/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <RiLinkedinBoxFill size={'1.8em'}
+              style={{ color: "rgba(98,148,185,255)"}}
+            />
+          </a>
+          <a
+            href="https://tricksterblog1o1.wordpress.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaBlogger size={'1.8em'}
+              style={{ color: "rgba(98,148,185,255)"}}
+            />
+          </a>
+        </div>
         <div className="main-btns">
           <a href={cv} className="btnA" download>
             <button>Download CV</button>
           </a>
-          <a href="#contact" className="btn-link" onClick={()=>audio.play()}>
+          <a href="#contact" className="btn-link" onClick={() => audio.play()}>
             <button>Let's Talk</button>
           </a>
         </div>
@@ -73,7 +103,7 @@ function Home() {
             href="https://tricksterblog1o1.wordpress.com"
             target="_blank"
             rel="noreferrer"
-            title="Gitlab"
+            title="Blog"
           >
             <FaBlogger
               style={{ color: "rgba(98,148,185,255)", marginBottom: "1em" }}
@@ -85,7 +115,9 @@ function Home() {
           </span>
         </span>
         <span className="scroller">
-          <a href="#contact" onClick={()=>audio.play()}>Scroll Down</a>
+          <a href="#contact" onClick={() => audio.play()}>
+            Scroll Down
+          </a>
         </span>
       </div>
       <div id="about">
@@ -95,63 +127,89 @@ function Home() {
       <Skill />
       <Services />
       <Contact />
-<div className="nav-cont">
-<div className="fix-nav">
-        <span
-          style={{
-            backgroundColor:
-              location === "home" ? "rgba(23,23,41,255)" : "rgba(23,23,41,0)",
-          }}
-        >
-          <a href="#home" onClick={() => {setLocation("home");}}>
-            <BsFillHouseFill size={"1.5em"} />
-          </a>
-        </span>
-        <span
-          style={{
-            backgroundColor:
-              location === "about" ? "rgba(23,23,41,255)" : "rgba(23,23,41,0)",
-          }}
-        >
-          <a href="#about" onClick={() => {setLocation("about");}}>
-            <BsPersonCircle size={"1.5em"} />
-          </a>
-        </span>
-        <span
-          style={{
-            backgroundColor:
-              location === "exp" ? "rgba(23,23,41,255)" : "rgba(23,23,41,0)",
-          }}
-        >
-          <a href="#exp" onClick={() => {setLocation("exp");}}>
-            <BsFillBarChartLineFill size={"1.5em"} />
-          </a>
-        </span>
-        <span
-          style={{
-            backgroundColor:
-              location === "serv" ? "rgba(23,23,41,255)" : "rgba(23,23,41,0)",
-          }}
-        >
-          <a href="#serv" onClick={() => {setLocation("serv");}}>
-            <BsServer size={"1.5em"} />
-          </a>
-        </span>
-        <span
-          style={{
-            backgroundColor:
-              location === "contact"
-                ? "rgba(23,23,41,255)"
-                : "rgba(23,23,41,0)",
-          }}
-        >
-          <a href="#contact" onClick={() => {setLocation("contact");}}>
-            <BsFillPersonLinesFill size={"1.5em"} />
-          </a>
-        </span>
+      <div className="nav-cont">
+        <div className="fix-nav">
+          <span
+            style={{
+              backgroundColor:
+                location === "home" ? "rgba(23,23,41,255)" : "rgba(23,23,41,0)",
+            }}
+          >
+            <a
+              href="#home"
+              onClick={() => {
+                setLocation("home");
+              }}
+            >
+              <BsFillHouseFill size={"1.5em"} />
+            </a>
+          </span>
+          <span
+            style={{
+              backgroundColor:
+                location === "about"
+                  ? "rgba(23,23,41,255)"
+                  : "rgba(23,23,41,0)",
+            }}
+          >
+            <a
+              href="#about"
+              onClick={() => {
+                setLocation("about");
+              }}
+            >
+              <BsPersonCircle size={"1.5em"} />
+            </a>
+          </span>
+          <span
+            style={{
+              backgroundColor:
+                location === "exp" ? "rgba(23,23,41,255)" : "rgba(23,23,41,0)",
+            }}
+          >
+            <a
+              href="#exp"
+              onClick={() => {
+                setLocation("exp");
+              }}
+            >
+              <BsFillBarChartLineFill size={"1.5em"} />
+            </a>
+          </span>
+          <span
+            style={{
+              backgroundColor:
+                location === "serv" ? "rgba(23,23,41,255)" : "rgba(23,23,41,0)",
+            }}
+          >
+            <a
+              href="#serv"
+              onClick={() => {
+                setLocation("serv");
+              }}
+            >
+              <BsServer size={"1.5em"} />
+            </a>
+          </span>
+          <span
+            style={{
+              backgroundColor:
+                location === "contact"
+                  ? "rgba(23,23,41,255)"
+                  : "rgba(23,23,41,0)",
+            }}
+          >
+            <a
+              href="#contact"
+              onClick={() => {
+                setLocation("contact");
+              }}
+            >
+              <BsFillPersonLinesFill size={"1.5em"} />
+            </a>
+          </span>
+        </div>
       </div>
-</div>
-      
     </>
   );
 }

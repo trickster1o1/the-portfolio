@@ -1,30 +1,32 @@
-import { gsap } from 'gsap';
-import { useEffect } from 'react';
-import './welcome.css';
+import { gsap } from "gsap";
+import { useEffect } from "react";
+import "./welcome.css";
 
 export default function Welcome() {
-    useEffect(() => {
-        const showtxt = gsap.timeline({defaults: {duration: '.1'}});
-        showtxt.to('body',{
-            overflowY: 'hidden'
-        });
-        showtxt.from('.txt-appear', {
-            y: '52%',
-            stagger:.2
-        });
-        showtxt.to('.welcome-wipe', {
-                bottom: '200%',
-                duration: '1.5',
-                delay: .2
-        });
-        showtxt.to('.welcome-screen',{ 
-            display:'none',
-            delay:-1.2
-        });
-        showtxt.to('body',{
-            overflowY: 'auto'
-        });
-    }, []);
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+
+    const showtxt = gsap.timeline({ defaults: { duration: ".1" } });
+    showtxt.to("body", {
+      overflowY: "hidden",
+    });
+    showtxt.from(".txt-appear", {
+      y: "52%",
+      stagger: 0.2,
+    });
+    showtxt.to(".welcome-wipe", {
+      bottom: "200%",
+      duration: "1.5",
+      delay: 0.2,
+    });
+    showtxt.to(".welcome-screen", {
+      display: "none",
+      delay: -1.2,
+    });
+    showtxt.to("body", {
+      overflowY: "auto",
+    });
+  }, []);
   return (
     <>
       <div className="welcome-screen">
