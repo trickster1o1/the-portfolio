@@ -11,6 +11,8 @@ import Skill from "./Skill";
 import Services from "./Services";
 import scrlEff from "./ls.mp3";
 
+// somme shit jst to deply check dont get too nosy here
+
 import {
   BsPersonCircle,
   BsFillHouseFill,
