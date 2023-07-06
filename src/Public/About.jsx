@@ -40,7 +40,7 @@ export default function About() {
                     </span>
                     </div>
                     <div className='right-bot'>
-                        <span>I'm a recently graduated IT Student with 1 year of experience in full stack web development with React and Laravel looking forward to growing my experience with other enthusiastic developers such as myself. <br />
+                        <span>I'm a recently graduated IT Student with 2 year of experience in full stack web and android app development with React, Flutter and Laravel looking forward to growing my experience with other enthusiastic developers such as myself. <br />
 					    <a href='#contact' className='btn-link' style={{'display':'block','marginTop':'2em'}}><button>Let's Talk</button></a>
                         </span>                    
                     </div>

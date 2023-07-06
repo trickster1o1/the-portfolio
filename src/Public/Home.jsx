@@ -32,7 +32,7 @@ function Home() {
       <div className="main-cont top-cont" id="home">
         <span>Hello, I'm</span>
         <h2>Nischal Tuladhar</h2>
-        <span className="fade-text">Fullstack Developer</span>
+        <span className="fade-text">Software Developer</span>
 
         <div className="m-media">
           <a
