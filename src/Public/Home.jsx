@@ -22,12 +22,21 @@ import {
 } from "react-icons/bs";
 import AboutMobile from "./AboutMobile";
 import Welcome from "./Welcome";
+import { Helmet } from "react-helmet";
 function Home() {
   let audio = new Audio(scrlEff);
   const [location, setLocation] = useState("home");
 
   return (
     <>
+    <Helmet>
+    <meta name="description" content="A recently graduated IT Student with 2 year of experience in full stack web and android app development with React, Flutter and Laravel looking forward to growing my experience with other enthusiastic developers such as myself." />
+    <meta property="og:site_name" content="TricksterWeb"/>
+    <meta property="og:image" content="https://tricksterweb.netlify.app/static/media/qwe.e08ebe6b4259730ad3a4.jpg"/>
+    <meta property="og:image:secure_url" content="https://tricksterweb.netlify.app/static/media/qwe.e08ebe6b4259730ad3a4.jpg"/>
+    <meta property="og:title" content="TricksterWeb"/>
+    <meta property="og:description" content="A recently graduated IT Student with 2 year of experience in full stack web and android app development with React, Flutter and Laravel looking forward to growing my experience with other enthusiastic developers such as myself."/>
+    </Helmet>
       <Welcome />
       <div className="main-cont top-cont" id="home">
         <span>Hello, I'm</span>
