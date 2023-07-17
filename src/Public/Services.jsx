@@ -11,7 +11,7 @@ export default function Services() {
             <div>
                 <BsCheckLg size={'.5em'} style={{'color':'rgba(98,148,185,255)', 'marginRight':'1em'}} />
                 <span>
-                Modern web designe implementaiton
+                Modern web design implementaiton
                 </span>
             </div>
             <div>
