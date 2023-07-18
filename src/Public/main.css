@@ -380,6 +380,17 @@ body {
         }
 }
 
+
+/* work comp */
+.work-cont {
+    text-align: center;
+}
+.work-cont img {
+    height: 90px;
+    width: auto;
+    margin: 1em;
+}
+
 @media only screen and (max-width: 1665px) {
     #serv, #exp, #about, #contact {
         min-height: 100vh;

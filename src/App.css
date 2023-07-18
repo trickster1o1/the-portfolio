@@ -25,7 +25,17 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
   background: rgba(98,148,185,.5);
 }
-
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start !important;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  height: fit-content !important;
+  padding: 2em 0;
+  margin-bottom: 12em;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

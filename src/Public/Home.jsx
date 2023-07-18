@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Contact from "./Contact";
 import "./main.css";
 import { RiGithubFill, RiLinkedinBoxFill } from "react-icons/ri";
+import { IoIosGitNetwork } from "react-icons/io";
 import { FaBlogger } from "react-icons/fa";
 
 import me from "./me.png";
@@ -22,10 +23,27 @@ import {
 } from "react-icons/bs";
 import AboutMobile from "./AboutMobile";
 import Welcome from "./Welcome";
+import Works from "./Works";
 function Home() {
   let audio = new Audio(scrlEff);
   const [location, setLocation] = useState("home");
-
+  useEffect(() => {
+    window.addEventListener("scroll", (event) => {
+      if(window.scrollY >= 0 && window.scrollY < 400 && location !== 'home') {
+        setLocation('home');
+      }if(window.scrollY >= 400 && window.scrollY < 1240 && location !== 'about') {
+        setLocation('about');
+      } if(window.scrollY >= 1240 && window.scrollY < 1700 && location !== 'work') {
+        setLocation('work');
+      } if(window.scrollY >= 1700 && window.scrollY < 2000 && location !== 'exp') {
+        setLocation('exp');
+      } if(window.scrollY >= 2000 && window.scrollY < 3216 && location !== 'serv') {
+        setLocation('serv');
+      } if(window.scrollY >= 3216 && location !== 'contact') {
+        setLocation('contact');
+      }
+    });
+  }, [location]);
   return (
     <>
       <Welcome />
@@ -40,8 +58,9 @@ function Home() {
             target="_blank"
             rel="noreferrer"
           >
-            <RiGithubFill size={'1.8em'}
-              style={{ color: "rgba(98,148,185,255)"}}
+            <RiGithubFill
+              size={"1.8em"}
+              style={{ color: "rgba(98,148,185,255)" }}
             />
           </a>
           <a
@@ -49,8 +68,9 @@ function Home() {
             target="_blank"
             rel="noreferrer"
           >
-            <RiLinkedinBoxFill size={'1.8em'}
-              style={{ color: "rgba(98,148,185,255)"}}
+            <RiLinkedinBoxFill
+              size={"1.8em"}
+              style={{ color: "rgba(98,148,185,255)" }}
             />
           </a>
           <a
@@ -58,8 +78,9 @@ function Home() {
             target="_blank"
             rel="noreferrer"
           >
-            <FaBlogger size={'1.8em'}
-              style={{ color: "rgba(98,148,185,255)"}}
+            <FaBlogger
+              size={"1.8em"}
+              style={{ color: "rgba(98,148,185,255)" }}
             />
           </a>
         </div>
@@ -117,7 +138,13 @@ function Home() {
           </span>
         </span>
         <span className="scroller">
-          <a href="#contact" onClick={() => audio.play()}>
+          <a
+            href="#contact"
+            onClick={() => {
+              audio.play();
+              setLocation("contact");
+            }}
+          >
             Scroll Down
           </a>
         </span>
@@ -126,6 +153,7 @@ function Home() {
         <About />
         <AboutMobile /> {/* Mobile Manipulation */}
       </div>
+      <Works />
       <Skill />
       <Services />
       <Contact />
@@ -134,7 +162,7 @@ function Home() {
           <span
             style={{
               backgroundColor:
-                location === "home" ? "rgba(23,23,41,255)" : "rgba(23,23,41,0)",
+                location === "home" ? "#292b66" : "rgba(23,23,41,0)",
             }}
           >
             <a
@@ -149,9 +177,7 @@ function Home() {
           <span
             style={{
               backgroundColor:
-                location === "about"
-                  ? "rgba(23,23,41,255)"
-                  : "rgba(23,23,41,0)",
+                location === "about" ? "#292b66" : "rgba(23,23,41,0)",
             }}
           >
             <a
@@ -166,7 +192,22 @@ function Home() {
           <span
             style={{
               backgroundColor:
-                location === "exp" ? "rgba(23,23,41,255)" : "rgba(23,23,41,0)",
+                location === "work" ? "#292b66" : "rgba(23,23,41,0)",
+            }}
+          >
+            <a
+              href="#work"
+              onClick={() => {
+                setLocation("work");
+              }}
+            >
+              <IoIosGitNetwork size={"1.5em"} />
+            </a>
+          </span>
+          <span
+            style={{
+              backgroundColor:
+                location === "exp" ? "#292b66" : "rgba(23,23,41,0)",
             }}
           >
             <a
@@ -181,7 +222,7 @@ function Home() {
           <span
             style={{
               backgroundColor:
-                location === "serv" ? "rgba(23,23,41,255)" : "rgba(23,23,41,0)",
+                location === "serv" ? "#292b66" : "rgba(23,23,41,0)",
             }}
           >
             <a
@@ -196,9 +237,7 @@ function Home() {
           <span
             style={{
               backgroundColor:
-                location === "contact"
-                  ? "rgba(23,23,41,255)"
-                  : "rgba(23,23,41,0)",
+                location === "contact" ? "#292b66" : "rgba(23,23,41,0)",
             }}
           >
             <a
