@@ -18,15 +18,7 @@ export default function AboutMobile() {
               I'm a recently graduated IT Student with 2 year of experience in
               full stack web and android app development with React, Flutter and
               Laravel looking forward to growing my experience with other
-              enthusiastic developers such as myself. You can find the works
-              I've done on{" "}
-              <a
-                href="https://github.com/trickster1o1"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Github
-              </a>
+              enthusiastic developers such as myself.
             </p>
           </span>
         </div>
