@@ -181,7 +181,7 @@ body {
     width: 45em;
     text-align: justify;
 } .about {
-    height: 55vh;
+    min-height: 100vh;
     padding-top: 3.5em;
 }.acnt-sk {
     /* border: 1px solid white; */
