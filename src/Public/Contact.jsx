@@ -2,7 +2,7 @@ import { AiOutlineMail } from "react-icons/ai";
 import { RiFacebookBoxLine, RiInstagramLine } from "react-icons/ri";
 import emailjs from 'emailjs-com';
 import { useState } from "react";
-export default function Contact() {
+export default function Contact(props) {
     const [msg,setMsg] = useState('');
     const [error,setError] = useState('');
     const [data,setData] = useState({});
@@ -19,7 +19,7 @@ export default function Contact() {
        
     }
     return (
-        <div className="main-cont contact" id='contact'>
+        <div className="main-cont contact" id='contact' ref={props.contactRef}>
             <span>Get In Touch</span>
             <h2 style={{'marginBottom':'1em'}}>Contact Me</h2>
             <div className="sub-cont">

@@ -1,8 +1,8 @@
 import { HiBadgeCheck } from "react-icons/hi";
 import Carousel from 'react-bootstrap/Carousel';
-export default function Skill() {
+export default function Skill(props) {
   return (
-    <div className="main-cont contact about custom-skill" id="exp">
+    <div className="main-cont contact about custom-skill" id="exp" ref={props.expRef}>
       <span>What Skills I Have</span>
       <h2 style={{ marginBottom: "1em" }}>My Experience</h2>
       <div className="abt-cont  desktop">

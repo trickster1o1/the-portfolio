@@ -1,4 +1,4 @@
-export default function Works() {
+export default function Works(props) {
   const data = [
     {
       name: "SEC Nepal",
@@ -32,7 +32,7 @@ export default function Works() {
     },    
   ];
   return (
-    <div className="main-cont container contact" id="work">
+    <div className="main-cont container contact" id="work" ref={props.workRef}>
       <span>Works I've Done</span>
       <h2 style={{ marginBottom: "1em" }}>My Works</h2>
       <div className="work-cont">

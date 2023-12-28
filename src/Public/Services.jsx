@@ -1,8 +1,8 @@
 import { BsCheckLg } from "react-icons/bs";
 import Carousel from 'react-bootstrap/Carousel';
-export default function Services() {
+export default function Services(props) {
   return (
-    <div className="main-cont contact about custom-service" id='serv'>
+    <div className="main-cont contact about custom-service" id='serv' ref={props.servRef}>
       <span>What I Offer</span>
       <h2 style={{ marginBottom: "1em" }}>Services</h2>
       <div className="abt-cont sv desktop">

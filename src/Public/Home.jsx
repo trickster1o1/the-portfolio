@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Contact from "./Contact";
 import "./main.css";
 import { RiGithubFill, RiLinkedinBoxFill } from "react-icons/ri";
@@ -27,27 +27,37 @@ import Works from "./Works";
 function Home() {
   let audio = new Audio(scrlEff);
   const [location, setLocation] = useState("home");
+  const homeRef = useRef(null);
+  const abtRef = useRef(null);
+  const workRef = useRef(null);
+  const expRef = useRef(null);
+  const servRef = useRef(null);
+  const contactRef = useRef(null);
   useEffect(() => {
-    window.addEventListener("scroll", (event) => {
-      if(window.scrollY >= 0 && window.scrollY < 400 && location !== 'home') {
+    const handelScroll = () => {
+      const scrollTop = window.scrollY;
+      if(scrollTop >= homeRef.current.offsetTop && scrollTop < abtRef.current.offsetTop ) {
         setLocation('home');
-      }if(window.scrollY >= 400 && window.scrollY < 1240 && location !== 'about') {
+      }if(scrollTop >= abtRef.current.offsetTop && scrollTop < workRef.current.offsetTop ) {
         setLocation('about');
-      } if(window.scrollY >= 1240 && window.scrollY < 1700 && location !== 'work') {
+      }if(scrollTop >= workRef.current.offsetTop && scrollTop < expRef.current.offsetTop ) {
         setLocation('work');
-      } if(window.scrollY >= 1700 && window.scrollY < 2000 && location !== 'exp') {
+      }if(scrollTop >= expRef.current.offsetTop && scrollTop < servRef.current.offsetTop ) {
         setLocation('exp');
-      } if(window.scrollY >= 2000 && window.scrollY < 3216 && location !== 'serv') {
+      }if(scrollTop >= servRef.current.offsetTop && scrollTop < contactRef.current.offsetTop ) {
         setLocation('serv');
-      } if(window.scrollY >= 3216 && location !== 'contact') {
+      }if(scrollTop >= contactRef.current.offsetTop) {
         setLocation('contact');
       }
+    }
+    window.addEventListener("scroll", (event) => {
+      handelScroll();
     });
   }, [location]);
   return (
     <>
       <Welcome />
-      <div className="main-cont top-cont" id="home">
+      <div className="main-cont top-cont" id="home" ref={homeRef}>
         <span>Hello, I'm</span>
         <h2>Nischal Tuladhar</h2>
         <span className="fade-text">Software Developer</span>
@@ -149,14 +159,14 @@ function Home() {
           </a>
         </span>
       </div>
-      <div id="about">
+      <div id="about" ref={abtRef}>
         <About />
         <AboutMobile /> {/* Mobile Manipulation */}
       </div>
-      <Works />
-      <Skill />
-      <Services />
-      <Contact />
+      <Works workRef={workRef} />
+      <Skill expRef={expRef} />
+      <Services servRef={servRef} />
+      <Contact contactRef={contactRef} />
       <div className="nav-cont">
         <div className="fix-nav">
           <span
