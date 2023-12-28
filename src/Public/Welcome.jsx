@@ -11,7 +11,7 @@ export default function Welcome() {
       overflowY: "hidden",
     });
     showtxt.from(".txt-appear", {
-      y: "52%",
+      y: "127%",
       stagger: 0.2,
     });
     showtxt.to(".welcome-wipe", {

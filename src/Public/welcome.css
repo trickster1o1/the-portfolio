@@ -13,6 +13,7 @@
 } .welcome-screen > div {
     color:green;
     font-size: 70pt;
+    margin-bottom: 2em;
 } .txt-block {
     display: block;
     background-color: #1e1e35;
@@ -65,3 +66,8 @@
     }
 }
 
+@media only screen and (max-height: 600px) {
+    .txt-block {
+        height: 1.2em;
+    }
+}
