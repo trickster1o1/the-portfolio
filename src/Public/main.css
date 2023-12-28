@@ -389,6 +389,10 @@ body {
     height: 90px;
     width: auto;
     margin: 1em;
+} .custom-skill {
+    padding-top: 0;
+} .custom-skill > div {
+    min-height: 30%;
 }
 
 @media only screen and (max-width: 1665px) {
@@ -397,4 +401,8 @@ body {
     }
 }
 
-  
+@media only screen and (max-height: 658px) {
+    .custom-service {
+        min-height: 150vh;
+    }
+} 

@@ -2,7 +2,7 @@ import { HiBadgeCheck } from "react-icons/hi";
 import Carousel from 'react-bootstrap/Carousel';
 export default function Skill() {
   return (
-    <div className="main-cont contact about" id="exp">
+    <div className="main-cont contact about custom-skill" id="exp">
       <span>What Skills I Have</span>
       <h2 style={{ marginBottom: "1em" }}>My Experience</h2>
       <div className="abt-cont  desktop">
