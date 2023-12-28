@@ -36,17 +36,17 @@ function Home() {
   useEffect(() => {
     const handelScroll = () => {
       const scrollTop = window.scrollY;
-      if(scrollTop >= homeRef.current.offsetTop && scrollTop < abtRef.current.offsetTop ) {
+      if(scrollTop >= homeRef.current.offsetTop && scrollTop <= homeRef.current.offsetTop+100 ) {
         setLocation('home');
-      }if(scrollTop >= abtRef.current.offsetTop && scrollTop < workRef.current.offsetTop ) {
+      }if(scrollTop > homeRef.current.offsetTop+100  && scrollTop <= abtRef.current.offsetTop+100 ) {
         setLocation('about');
-      }if(scrollTop >= workRef.current.offsetTop && scrollTop < expRef.current.offsetTop ) {
+      }if(scrollTop > abtRef.current.offsetTop+100 && scrollTop <= workRef.current.offsetTop+100 ) {
         setLocation('work');
-      }if(scrollTop >= expRef.current.offsetTop && scrollTop < servRef.current.offsetTop ) {
+      }if(scrollTop > workRef.current.offsetTop+100 && scrollTop <= expRef.current.offsetTop+100 ) {
         setLocation('exp');
-      }if(scrollTop >= servRef.current.offsetTop && scrollTop < contactRef.current.offsetTop ) {
+      }if(scrollTop > expRef.current.offsetTop+100 && scrollTop <= servRef.current.offsetTop+100) {
         setLocation('serv');
-      }if(scrollTop >= contactRef.current.offsetTop) {
+      }if(scrollTop > servRef.current.offsetTop+100) {
         setLocation('contact');
       }
     }
