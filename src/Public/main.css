@@ -406,3 +406,9 @@ body {
         min-height: 150vh;
     }
 } 
+
+@media only screen and (max-height: 450px) {
+    .main-cont {
+        margin-bottom: 20em;
+    }
+}
