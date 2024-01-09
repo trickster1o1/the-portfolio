@@ -398,7 +398,7 @@ body {
 @media only screen and (max-width: 1665px) {
     #serv, #exp, #about, #contact {
         min-height: 100vh;
-    }
+    } 
 }
 
 @media only screen and (max-height: 658px) {
@@ -407,8 +407,8 @@ body {
     }
 } 
 
-@media only screen and (max-height: 450px) {
+@media only screen and (max-height: 825px) {
     .main-cont {
-        margin-bottom: 20em;
+        margin-bottom: 40em;
     }
 }
