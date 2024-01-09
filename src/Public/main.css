@@ -409,6 +409,11 @@ body {
 
 @media only screen and (max-height: 825px) {
     .main-cont {
-        margin-bottom: 40em;
+        margin-bottom: 25em;
+    }
+}
+@media only screen and (max-height: 380px) {
+    .main-cont {
+        margin-bottom: 35em;
     }
 }
