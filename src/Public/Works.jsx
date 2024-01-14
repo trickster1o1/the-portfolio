@@ -1,33 +1,41 @@
+import secnepal from "./devs/secnepal.png";
+import vastu from "./devs/vastu.png";
+import chainge from "./devs/chainge.png";
+import shiva from "./devs/shiva.png";
+import jawhara from "./devs/jawhara.png";
+import avani from "./devs/avani.png";
+import pacific from "./devs/pacific.png";
+
 export default function Works(props) {
   const data = [
     {
       name: "SEC Nepal",
-      src: "https://upload.wikimedia.org/wikipedia/commons/0/04/S-Bahn-Logo_Salzburg.png",
+      src: secnepal,
       url: "https://secnepal.org",
     },
     {
       name: "Vastu Hotel",
-      src: "https://vastuhotel.com/uploads/vastu_logo.png",
+      src: vastu,
       url: "https://vastuhotel.com",
     },{
       name: "Pacific Engineering Co. Pvt. Ltd.",
-      src: "https://pacificeng.com.np/wp-content/uploads/2020/01/logo.png",
+      src: pacific,
       url: "https://pacificeng.com.np",
     },{
       name: "Jawhara Invest",
-      src: "https://jawharainvest.com/static/media/mainLogo.1d9fd86241cc6668ffe4.png",
+      src: jawhara,
       url: "https://jawharainvest.com",
     },{
       name: "Chainge Digital Pvt. Ltd.",
-      src: "https://chaingedigital.com.np/static/media/logo.0e2f3c1a214f6bb135f6.jpg",
+      src: chainge,
       url: "https://chaingedigital.com.np",
     },{
       name: "Avani Nepal",
-      src: "https://avaninepal.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favani_logo.3f4c62aa.jpg&w=64&q=75",
+      src: avani,
       url: "https://avaninepal.com",
     },{
       name: "Shiva Travels Pvt. Ltd.",
-      src: "https://shivatravels.com.np/logoNeg.png",
+      src: shiva,
       url: "https://shivatravels.com.np",
     },    
   ];
