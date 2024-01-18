@@ -384,6 +384,12 @@ body {
 /* work comp */
 .work-cont {
     text-align: center;
+    display: flex;
+    /* flex-shrink: 1; */
+    flex-wrap: wrap;
+    justify-content: center;
+}.work-cont a {
+    margin-top: 1em;
 }
 .work-cont img {
     height: 90px;
