@@ -6,6 +6,7 @@ import jawhara from "./devs/jawhara.png";
 import avani from "./devs/avani.png";
 import pacific from "./devs/pacific.png";
 import rugs from "./devs/rugs.png";
+import sqc from "./devs/sqc.png";
 
 export default function Works(props) {
   const data = [
@@ -43,6 +44,11 @@ export default function Works(props) {
       name: "NP Rugs",
       src: rugs,
       url: "https://www.nprugs.com",
+    },   
+    {
+      name: "SQC Education",
+      src: sqc,
+      url: "https://sqceducation.com",
     },    
   ];
   return (
