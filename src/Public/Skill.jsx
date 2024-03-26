@@ -19,7 +19,7 @@ export default function Skill(props) {
                         marginRight: "1em",
                       }}
                     />
-                    Html
+                    HTML5
                   </h5>
                 </div>
                 <div>
@@ -43,7 +43,7 @@ export default function Skill(props) {
                         marginRight: "1em",
                       }}
                     />
-                    CSS
+                    CSS3
                   </h5>
                 </div>
                 <div>
@@ -294,7 +294,7 @@ export default function Skill(props) {
                         marginRight: "1em",
                       }}
                     />
-                    PostgreSQL
+                    Node
                   </h5>
                 </div>
                 <div>
@@ -328,7 +328,7 @@ export default function Skill(props) {
                         marginRight: "1em",
                       }}
                     />
-                    Html
+                    HTML5
                   </h5>
                 </div>
                 <div>
@@ -352,7 +352,7 @@ export default function Skill(props) {
                         marginRight: "1em",
                       }}
                     />
-                    CSS
+                    CSS3
                   </h5>
                 </div>
                 <div>
@@ -603,7 +603,7 @@ export default function Skill(props) {
                         marginRight: "1em",
                       }}
                     />
-                    PostgreSQL
+                    Node
                   </h5>
                 </div>
                 <div>
