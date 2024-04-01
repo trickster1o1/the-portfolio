@@ -10,6 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 } .welcome-screen > div {
     color:green;
     font-size: 70pt;
@@ -22,6 +23,7 @@
     position: absolute;
     top: 54.5%;
 }.txt-appear {
+    visibility: hidden;
     display: inline-block;
 } .welcome-wipe {
     position: absolute;

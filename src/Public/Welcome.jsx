@@ -10,6 +10,9 @@ export default function Welcome() {
     showtxt.to("body", {
       overflowY: "hidden",
     });
+    showtxt.to(".txt-appear", {
+      visibility: 'visible',
+    });
     showtxt.from(".txt-appear", {
       y: "127%",
       stagger: 0.2,
