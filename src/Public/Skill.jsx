@@ -425,7 +425,7 @@ export default function Skill(props) {
                         marginRight: "1em",
                       }}
                     />
-                    Fluter
+                    Flutter
                   </h5>
                 </div>
                 <div>

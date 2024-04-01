@@ -1,8 +1,25 @@
 import { BsCheckLg } from "react-icons/bs";
 import Carousel from 'react-bootstrap/Carousel';
+import {gsap} from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import { useEffect } from "react";
 export default function Services(props) {
+  gsap.registerPlugin(ScrollTrigger);
+  useEffect(()=> {
+    gsap.to('.service-ani', {
+      scrollTrigger: {
+        trigger: '.service-ani',
+        start: "top 55%",
+        end: "bottom 27%",
+        toggleActions: "restart reverse restart reverse"
+      },
+      y: -15,
+      duration: 1,
+      opacity: 1,
+    });
+  }, []);
   return (
-    <div className="main-cont contact about custom-service" id='serv' ref={props.servRef}>
+    <div className="main-cont contact about custom-service service-ani" id='serv' ref={props.servRef}>
       <span>What I Offer</span>
       <h2 style={{ marginBottom: "1em" }}>Services</h2>
       <div className="abt-cont sv desktop">
