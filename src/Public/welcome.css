@@ -60,7 +60,7 @@
                     font-size: 15pt;
                 }.txt-block {
                     position: absolute;
-                    top: 51%;
+                    top: 51.5%;
                 } 
             }
         }
@@ -69,6 +69,6 @@
 
 @media only screen and (max-height: 825px) {
     .txt-block {
-        height: 1.35em;
+        height: 1.2em;
     }
 }
