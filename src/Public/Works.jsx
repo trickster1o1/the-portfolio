@@ -15,17 +15,23 @@ export default function Works(props) {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-    gsap.to('.work-ani', {
-      scrollTrigger: {
-        trigger: '.work-ani',
-        start: "top 55%",
-        end: "bottom 20%",
-        toggleActions: "restart reverse restart reverse"
-      },
-      y: -15,
-      duration: 1,
-      opacity: 1,
-    });
+    let ctx = gsap.context(() => {
+      gsap.from('.work-ani', {
+        scrollTrigger: {
+          trigger: '.work-ani',
+          start: "top 55%",
+          end: "bottom 20%",
+          toggleActions: "restart reverse restart reverse"
+        },
+        y: 25,
+        duration: 1,
+        opacity: 0,
+        ease: 'power2.inOut'
+      });
+    })
+
+    return ()=>ctx.revert();
+    
   }, []);
   const data = [
     {

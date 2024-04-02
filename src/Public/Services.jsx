@@ -6,17 +6,23 @@ import { useEffect } from "react";
 export default function Services(props) {
   gsap.registerPlugin(ScrollTrigger);
   useEffect(()=> {
-    gsap.to('.service-ani', {
-      scrollTrigger: {
-        trigger: '.service-ani',
-        start: "top 55%",
-        end: "bottom 27%",
-        toggleActions: "restart reverse restart reverse"
-      },
-      y: -15,
-      duration: 1,
-      opacity: 1,
-    });
+    let ctx = gsap.context(()=> {
+        gsap.from('.service-ani', {
+            scrollTrigger: {
+              trigger: '.service-ani',
+              start: "top 55%",
+              end: "bottom 27%",
+              toggleActions: "restart reverse restart reverse"
+            },
+            y: 25,
+            duration: 1,
+            opacity: 0,
+            ease:'power2.inOut'
+          });
+    })
+
+    return ()=>ctx.revert();
+    
   }, []);
   return (
     <div className="main-cont contact about custom-service service-ani" id='serv' ref={props.servRef}>
