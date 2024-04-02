@@ -16,11 +16,12 @@
     margin-bottom: 2em;
 } .txt-block {
     display: block;
-    background-color: #1e1e35;
+    /* background-color: #1e1e35; */
+    background-color: black;
     width: 13.5em;
-    height: 1.2em;
+    height: 1em;
     position: absolute;
-    top: 54.5%;
+    top: 54.8%;
 }.txt-appear {
     visibility: hidden;
     display: inline-block;
