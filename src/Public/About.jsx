@@ -60,7 +60,7 @@ export default function About() {
         duration:1,
         opacity: 0,
         ease:'power2.inOut',
-        delay: 1.1,
+        delay: .7,
       })
 
       gsap.from('.ani-pj', {
@@ -74,7 +74,7 @@ export default function About() {
         y: 25,
         opacity: 0,
         ease:'power2.inOut',
-        delay: 1.25,
+        delay: .8,
       })
       gsap.from('.txt-ani', {
         scrollTrigger: {
@@ -87,7 +87,7 @@ export default function About() {
         y: 25,
         opacity: 0,
         ease:'power2.inOut',
-        delay: 1.50,
+        delay: 1,
       })
 
       

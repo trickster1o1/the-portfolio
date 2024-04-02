@@ -1,18 +1,80 @@
 import pp from "./qwe.jpg";
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { useEffect } from "react";
 
 export default function AboutMobile() {
+  gsap.registerPlugin(ScrollTrigger);
+  useEffect(()=>{
+    let ctx = gsap.context(()=> {
+      gsap.from('.mob-b-ani', {
+        scrollTrigger: {
+          trigger: '.mob-ani-trig',
+          start: "top 35%",
+          end: "bottom 0%",
+          toggleActions: "restart reverse restart reverse"
+        },
+        duration:.5,
+        scale: 0,
+        opacity: 0,
+        ease:'power2.inOut'
+      })
+
+      gsap.from('.mob-f-ani', {
+        scrollTrigger: {
+          trigger: '.mob-ani-trig',
+          start: "top 35%",
+          end: "bottom 20%",
+          toggleActions: "restart reverse restart reverse"
+        },
+        duration:1,
+        rotate: 0,
+        opacity: 0,
+        ease:'power2.inOut',
+        delay: .2,
+      })
+
+      gsap.from('.mob-txt-ani', {
+        scrollTrigger: {
+          trigger: '.mob-ani-trig',
+          start: "top 35%",
+          end: "bottom 20%",
+          toggleActions: "restart reverse restart reverse"
+        },
+        duration:1,
+        opacity: 0,
+        ease:'power2.inOut',
+        delay: .5,
+      })
+
+      gsap.from('.mob-btn-ani', {
+        scrollTrigger: {
+          trigger: '.mob-ani-trig',
+          start: "top 35%",
+          end: "bottom 20%",
+          toggleActions: "restart reverse restart reverse"
+        },
+        duration:1,
+        opacity: 0,
+        ease:'power2.inOut',
+        delay: .7,
+      })
+    });
+
+    return ()=>ctx.revert();
+  }, []);
   return (
-    <div className="main-cont contact about mobile">
+    <div className="main-cont contact about mobile mob-ani-trig">
       <span>Get To Know</span>
       <h2 style={{ marginBottom: "1em" }}>About Me</h2>
       <div className="abt-cont">
         <div className="pp-layer">
-          <div className="front-img">
+          <div className="front-img mob-f-ani">
             <img src={pp} alt="Me" />
           </div>
-          <div className="back-img"></div>
+          <div className="back-img mob-b-ani"></div>
         </div>
-        <div className="abt-layer">
+        <div className="abt-layer mob-txt-ani">
           <span>
             <p>
               I'm a recently graduated IT Student with 2 year of experience in
@@ -22,7 +84,7 @@ export default function AboutMobile() {
             </p>
           </span>
         </div>
-        <div className="exp-layer">
+        <div className="exp-layer mob-btn-ani">
           <a
             href="#contact"
             className="btn-link"
