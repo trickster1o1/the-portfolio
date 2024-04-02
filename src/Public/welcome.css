@@ -19,9 +19,9 @@
     /* background-color: #1e1e35; */
     background-color: black;
     width: 13.5em;
-    height: 1em;
+    height: 1.2em;
     position: absolute;
-    top: 54.8%;
+    top: 54.5%;
 }.txt-appear {
     visibility: hidden;
     display: inline-block;
@@ -70,6 +70,6 @@
 
 @media only screen and (max-height: 825px) {
     .txt-block {
-        height: 1.2em;
+        height: 1.35em;
     }
 }
