@@ -15,7 +15,6 @@ export default function About() {
           trigger: '.ani-trigg',
           start: "top 55%",
           end: "bottom 0%",
-          markers:true,
           toggleActions: "restart reverse restart reverse"
         },
         duration:.5,
