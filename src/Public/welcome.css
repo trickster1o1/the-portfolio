@@ -16,8 +16,7 @@
     margin-bottom: 2em;
 } .txt-block {
     display: block;
-    /* background-color: #1e1e35; */
-    background-color: black;
+    background-color: #1e1e35;
     width: 13.5em;
     height: 1.2em;
     position: absolute;
