@@ -81,12 +81,16 @@ body {
     padding: 1em;
     border-radius: 10px;
     color:white;
+} .sub-cont input:nth-child(1) {
+    margin-top: -25px;
 } .sub-cont button {
     width: 15%;
     padding: .6em;
     border: none;
     border-radius: 10px;
     background-color:rgba(98,148,185,255);
+} .in-ani, .c-ani {
+    opacity: 0;
 }
 
 
