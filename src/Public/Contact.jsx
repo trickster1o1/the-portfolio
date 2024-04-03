@@ -19,8 +19,8 @@ export default function Contact(props) {
       emailjs
         .sendForm("gmail", "template_yd2umv6", e.target, "cioMD6HpOHdTxNtsC")
         .then((r) => {
-          console.log(r);
           e.target.reset();
+          setData({});
           setMsg("Thank You For Contacting");
         })
         .catch((e) => console.log(e));
@@ -150,7 +150,7 @@ export default function Contact(props) {
               onChange={(e) => setData({ ...data, msg: e.target.value })}
               className="in-ani"
             ></textarea>
-            {msg ? <small>{msg}</small> : error ? <small>{error}</small> : null}
+            {msg ? <small style={{marginTop: '20px'}}>{msg}</small> : error ? <small style={{marginTop: '20px'}}>{error}</small> : null}
             <button className="in-ani">Send Message</button>
           </form>
         </div>
