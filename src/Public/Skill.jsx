@@ -32,6 +32,7 @@ export default function Skill(props) {
         opacity: 0,
         x: -200,
         duration: 0.5,
+        delay: -0.3,
         ease: "power2.inOut",
       });
     });
