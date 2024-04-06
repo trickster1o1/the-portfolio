@@ -101,7 +101,7 @@ export default function About() {
       <h2 style={{ marginBottom: "1em" }} className="ani-trigg">
         About Me
       </h2>
-      <div className="abt-cont">
+      <div className="abt-cont abt-desk-cont">
         <div className="abt-left acnt">
           <div className="front-img front-img-ani">
             <img src={pp} alt="Me" />

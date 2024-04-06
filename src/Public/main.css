@@ -2,6 +2,8 @@ body {
     background-color: rgba(30,30,53,255);
     background-image: url('./bg-texture.png');
     color: white;
+}html, body {
+    max-width: 100%;
     overflow-x: hidden;
 }
 .main-cont {
@@ -332,6 +334,21 @@ body {
 } .m-media {
     display: none;
 }
+
+/* about responsive */
+
+
+@media only screen and (max-width: 1440px) {
+    .abt-desk-cont {
+        flex-direction: column;
+        align-items: center;
+    } .abt-desk-cont > .abt-left {
+        height: 22em;
+        width: 22em;
+    }
+}
+
+/* ================ */
 
 
 /* Mobile css */
