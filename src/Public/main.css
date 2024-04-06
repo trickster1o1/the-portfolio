@@ -2,9 +2,10 @@ body {
     background-color: rgba(30,30,53,255);
     background-image: url('./bg-texture.png');
     color: white;
-}html, body {
+}
+html, body {
     max-width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .main-cont {
     height: 100vh;

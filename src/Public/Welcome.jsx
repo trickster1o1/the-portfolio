@@ -27,7 +27,11 @@ export default function Welcome() {
       delay: -1.2,
     });
     showtxt.to("body", {
-      overflowY: "auto",
+      overflowY: "scroll",
+    });
+    showtxt.to("html", {
+      overflowY: "scroll",
+      delay: -1
     });
   }, []);
   return (
