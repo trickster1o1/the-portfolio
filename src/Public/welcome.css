@@ -18,7 +18,7 @@
     display: block;
     background-color: #1e1e35;
     width: 13.5em;
-    height: 1.2em;
+    height: 2em;
     position: absolute;
     top: 54.5%;
 }.txt-appear {
@@ -61,15 +61,15 @@
                 }.txt-block {
                     position: absolute;
                     top: 50.3%;
-                    height: 1.4em;
+                    /* height: 1.4em; */
                 } 
             }
         }
     }
 }
 
-@media only screen and (max-height: 825px) {
+/* @media only screen and (max-height: 825px) {
     .txt-block {
-        height: 1.2em;
+        height: 5em;
     }
-}
+} */
