@@ -14,7 +14,7 @@ export default function About() {
         scrollTrigger: {
           trigger: '.ani-trigg',
           start: "top 55%",
-          end: `+=${document.querySelector('.ani-trigg').offsetHeight + 100} 0%`,
+          end: `+=${document.querySelector('.ani-trigg').offsetHeight + 275} 0%`,
           toggleActions: "restart reverse restart reverse"
         },
         duration:.5,
@@ -27,7 +27,7 @@ export default function About() {
         scrollTrigger: {
           trigger: '.ani-trigg',
           start: "top 55%",
-          end: `+=${document.querySelector('.ani-trigg').offsetHeight + 100} 0%`,
+          end: `+=${document.querySelector('.ani-trigg').offsetHeight + 275} 0%`,
           toggleActions: "restart reverse restart reverse"
         },
         duration:1,
@@ -41,7 +41,7 @@ export default function About() {
         scrollTrigger: {
           trigger: '.ani-trigg',
           start: "top 55%",
-          end: `+=${document.querySelector('.ani-trigg').offsetHeight + 100} 0%`,
+          end: `+=${document.querySelector('.ani-trigg').offsetHeight + 275} 0%`,
           toggleActions: "restart reverse restart reverse"
         },
         duration:1,
@@ -54,7 +54,7 @@ export default function About() {
         scrollTrigger: {
           trigger: '.ani-trigg',
           start: "top 55%",
-          end: `+=${document.querySelector('.ani-trigg').offsetHeight + 100} 0%`,
+          end: `+=${document.querySelector('.ani-trigg').offsetHeight + 275} 0%`,
           toggleActions: "restart reverse restart reverse"
         },
         duration:1,
@@ -67,7 +67,7 @@ export default function About() {
         scrollTrigger: {
           trigger: '.ani-trigg',
           start: "top 55%",
-          end: `+=${document.querySelector('.ani-trigg').offsetHeight + 100} 0%`,
+          end: `+=${document.querySelector('.ani-trigg').offsetHeight + 275} 0%`,
           toggleActions: "restart reverse restart reverse"
         },
         duration:1,
@@ -80,7 +80,7 @@ export default function About() {
         scrollTrigger: {
           trigger: '.ani-trigg',
           start: "top 55%",
-          end: `+=${document.querySelector('.ani-trigg').offsetHeight + 100} 0%`,
+          end: `+=${document.querySelector('.ani-trigg').offsetHeight + 275} 0%`,
           toggleActions: "restart reverse restart reverse"
         },
         duration:1,

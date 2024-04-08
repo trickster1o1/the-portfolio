@@ -133,11 +133,14 @@ html, body {
     margin-top: auto;
     border-radius: 50% 50% 0 0;
     overflow: hidden;
+    position: relative;
 
 } .img-cont > span >img {
     height: 112%;
     margin-bottom: -3.5em;
     width: auto;
+    position: absolute;
+    top: 0;
 } .abt-cont {
     display: flex;
     flex-direction: row;
