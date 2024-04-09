@@ -16,19 +16,23 @@ export default function Works(props) {
 
   useEffect(() => {
     let ctx = gsap.context(() => {
-      gsap.from('.work-ani', {
+      let tm = gsap.timeline({
         scrollTrigger: {
           trigger: '.work-ani',
           start: "top 55%",
           end: "bottom 20%",
           toggleActions: "restart reverse restart reverse"
-        },
-        y: 25,
-        duration: 1,
-        opacity: 0,
-        ease: 'power2.inOut'
+        }
       });
-    })
+
+      tm.from('.ani-show-img', {
+        y: 25,
+        duration: .8,
+        opacity: 0,
+        ease: 'power2.inOut',
+        stagger: 0.2
+      });
+    });
 
     return ()=>ctx.revert();
     
@@ -91,7 +95,7 @@ export default function Works(props) {
       <div className="work-cont">
         {data
           ? data.map((d, index) => (
-              <a key={index} href={d.url} target="_blank" rel="noreferrer">
+              <a key={index} href={d.url} target="_blank" rel="noreferrer" className="ani-show-img">
                 <img
                   src={d.src}
                   alt={d.name}

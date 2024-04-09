@@ -18,7 +18,7 @@ export default function Skill(props) {
         },
         opacity: 0,
         x: 200,
-        duration: 0.5,
+        duration: 1,
         ease: "power2.inOut",
       });
 
@@ -31,8 +31,7 @@ export default function Skill(props) {
         },
         opacity: 0,
         x: -200,
-        duration: 0.5,
-        delay: -0.3,
+        duration: 1,
         ease: "power2.inOut",
       });
     });
@@ -67,8 +66,8 @@ export default function Skill(props) {
       <span>What Skills I Have</span>
       <h2 style={{ marginBottom: "1em" }}>My Experience</h2>
       <div className="abt-cont desktop skill-ani-trig">
-        <div className="abt-left acnt-sk">
-          <span className="front-end sk ani-leftt">
+        <div className="abt-left acnt-sk ani-leftt">
+          <span className="front-end sk">
             <h5 className="head-sk">Frontend Development</h5>
             <div className="exp">
               <span>
