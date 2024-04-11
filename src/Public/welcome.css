@@ -17,10 +17,11 @@
 } .txt-block {
     display: block;
     background-color: #1e1e35;
-    width: 13.5em;
+    width: 100%;
     height: 2em;
     position: absolute;
     top: 54.5%;
+    left: 0;
 }.txt-appear {
     visibility: hidden;
     display: inline-block;
@@ -61,15 +62,8 @@
                 }.txt-block {
                     position: absolute;
                     top: 50.3%;
-                    /* height: 1.4em; */
                 } 
             }
         }
     }
 }
-
-/* @media only screen and (max-height: 825px) {
-    .txt-block {
-        height: 5em;
-    }
-} */
