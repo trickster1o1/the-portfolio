@@ -51,6 +51,18 @@ export default function Contact(props) {
         delay: -1,
         ease: 'power2.inOut'
       });
+
+      gsap.from(".cont-subTxt-ani", {
+        scrollTrigger: {
+          trigger: ".cont-ani-trig",
+          start: "top 50%",
+          end: "bottom 20%",
+          toggleActions: "restart reverse restart reverse",
+        },
+        text: "_",
+        duration: 1,
+        ease: "steps(12)",
+      });
     });
 
     return () => ctx.revert();
@@ -61,7 +73,7 @@ export default function Contact(props) {
       id="contact"
       ref={props.contactRef}
     >
-      <span>Get In Touch</span>
+      <span className="cont-subTxt-ani">Get In Touch</span>
       <h2 style={{ marginBottom: "1em" }}>Contact Me</h2>
       <div className="sub-cont">
         <div className="smedia-mob">

@@ -99,10 +99,9 @@ export default function About() {
           end: `+=${document.querySelector('.ani-trigg').offsetHeight + 275} 0%`,
           toggleActions: "restart reverse restart reverse"
         },
-        text: " ",
+        text: "_",
         duration:1,
-        ease:'none',
-        stagger: 1
+        ease: "steps(11)"
       })
       
     });
@@ -112,7 +111,7 @@ export default function About() {
   return (
     <div className="main-cont contact about desktop">
       <span className="abt-subTxt-ani">Get To Know</span>
-      <h2 style={{ marginBottom: "1em" }} className="ani-trigg abt-subTxt-ani">
+      <h2 style={{ marginBottom: "1em" }} className="ani-trigg">
         About Me
       </h2>
       <div className="abt-cont abt-desk-cont">

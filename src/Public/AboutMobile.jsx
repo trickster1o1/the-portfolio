@@ -1,86 +1,84 @@
 import pp from "./qwe.jpg";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import TextPlugin from "gsap/TextPlugin";
 import { useEffect } from "react";
 
 export default function AboutMobile() {
-  gsap.registerPlugin(ScrollTrigger, TextPlugin);
-  useEffect(()=>{
-    let ctx = gsap.context(()=> {
-      gsap.from('.mob-b-ani', {
+  gsap.registerPlugin(ScrollTrigger);
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.from(".mob-b-ani", {
         scrollTrigger: {
-          trigger: '.mob-ani-trig',
+          trigger: ".mob-ani-trig",
           start: "top 35%",
           end: "bottom 0%",
-          toggleActions: "restart reverse restart reverse"
+          toggleActions: "restart reverse restart reverse",
         },
-        duration:.5,
+        duration: 0.5,
         scale: 0,
         opacity: 0,
-        ease:'power2.inOut'
-      })
+        ease: "power2.inOut",
+      });
 
-      gsap.from('.mob-f-ani', {
+      gsap.from(".mob-f-ani", {
         scrollTrigger: {
-          trigger: '.mob-ani-trig',
+          trigger: ".mob-ani-trig",
           start: "top 35%",
           end: "bottom 20%",
-          toggleActions: "restart reverse restart reverse"
+          toggleActions: "restart reverse restart reverse",
         },
-        duration:1,
+        duration: 1,
         rotate: 0,
         opacity: 0,
-        ease:'power2.inOut',
-        delay: .2,
-      })
+        ease: "power2.inOut",
+        delay: 0.2,
+      });
 
-      gsap.from('.mob-txt-ani', {
+      gsap.from(".mob-txt-ani", {
         scrollTrigger: {
-          trigger: '.mob-ani-trig',
+          trigger: ".mob-ani-trig",
           start: "top 35%",
           end: "bottom 20%",
-          toggleActions: "restart reverse restart reverse"
+          toggleActions: "restart reverse restart reverse",
         },
-        duration:1,
+        duration: 1,
         opacity: 0,
-        ease:'power2.inOut',
-        delay: .5,
-      })
+        ease: "power2.inOut",
+        delay: 0.5,
+      });
 
-      gsap.from('.mob-btn-ani', {
+      gsap.from(".mob-btn-ani", {
         scrollTrigger: {
-          trigger: '.mob-ani-trig',
+          trigger: ".mob-ani-trig",
           start: "top 35%",
           end: "bottom 20%",
-          toggleActions: "restart reverse restart reverse"
+          toggleActions: "restart reverse restart reverse",
         },
-        duration:1,
+        duration: 1,
         opacity: 0,
-        ease:'power2.inOut',
-        delay: .7,
-      })
+        ease: "power2.inOut",
+        delay: 0.7,
+      });
+
+      gsap.from(".abtMob-subTxt-ani", {
+        scrollTrigger: {
+          trigger: ".mob-ani-trig",
+          start: "top 35%",
+          end: "bottom 20%",
+          toggleActions: "restart reverse restart reverse",
+        },
+        text: "_",
+        duration: 1,
+        ease: "steps(11)",
+      });
     });
 
-    gsap.from('.abtMob-subTxt-ani', {
-      scrollTrigger: {
-        trigger: '.mob-ani-trig',
-        start: "top 35%",
-        end: "bottom 20%",
-        toggleActions: "restart reverse restart reverse"
-      },
-      text: " ",
-      duration:1,
-      ease:'none',
-      stagger: 1
-    })
-
-    return ()=>ctx.revert();
+    return () => ctx.revert();
   }, []);
   return (
     <div className="main-cont contact about mobile mob-ani-trig">
       <span className="abtMob-subTxt-ani">Get To Know</span>
-      <h2 style={{ marginBottom: "1em" }} className="abtMob-subTxt-ani">About Me</h2>
+      <h2 style={{ marginBottom: "1em" }}>About Me</h2>
       <div className="abt-cont">
         <div className="pp-layer">
           <div className="front-img mob-f-ani">

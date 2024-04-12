@@ -34,6 +34,18 @@ export default function Skill(props) {
         duration: 1,
         ease: "power2.inOut",
       });
+
+      gsap.from(".skill-subTxt-ani", {
+        scrollTrigger: {
+          trigger: ".skill-ani-trig",
+          start: "top 50%",
+          end: "bottom 20%",
+          toggleActions: "restart reverse restart reverse",
+        },
+        text: "_",
+        duration: 1,
+        ease: "steps(18)",
+      });
     });
 
     return () => ctx.revert();
@@ -63,7 +75,7 @@ export default function Skill(props) {
       id="exp"
       ref={props.expRef}
     >
-      <span>What Skills I Have</span>
+      <span className="skill-subTxt-ani">What Skills I Have</span>
       <h2 style={{ marginBottom: "1em" }}>My Experience</h2>
       <div className="abt-cont desktop skill-ani-trig">
         <div className="abt-left acnt-sk ani-leftt">

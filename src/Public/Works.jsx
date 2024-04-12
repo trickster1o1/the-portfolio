@@ -18,24 +18,35 @@ export default function Works(props) {
     let ctx = gsap.context(() => {
       let tm = gsap.timeline({
         scrollTrigger: {
-          trigger: '.work-ani',
+          trigger: ".work-ani",
           start: "top 55%",
           end: "bottom 20%",
-          toggleActions: "restart reverse restart reverse"
-        }
+          toggleActions: "restart reverse restart reverse",
+        },
       });
 
-      tm.from('.ani-show-img', {
+      tm.from(".ani-show-img", {
         y: 25,
-        duration: .8,
+        duration: 0.8,
         opacity: 0,
-        ease: 'power2.inOut',
-        stagger: 0.2
+        ease: "power2.inOut",
+        stagger: 0.2,
+      });
+
+      gsap.from(".work-subTxt-ani", {
+        scrollTrigger: {
+          trigger: ".work-ani",
+          start: "top 55%",
+          end: "bottom 20%",
+          toggleActions: "restart reverse restart reverse",
+        },
+        text: "_",
+        duration: 1,
+        ease: "steps(15)",
       });
     });
 
-    return ()=>ctx.revert();
-    
+    return () => ctx.revert();
   }, []);
   const data = [
     {
@@ -90,12 +101,18 @@ export default function Works(props) {
       id="work"
       ref={props.workRef}
     >
-      <span>Works I've Done</span>
+      <span className="work-subTxt-ani">Works I've Done</span>
       <h2 style={{ marginBottom: "1em" }}>My Works</h2>
       <div className="work-cont">
         {data
           ? data.map((d, index) => (
-              <a key={index} href={d.url} target="_blank" rel="noreferrer" className="ani-show-img">
+              <a
+                key={index}
+                href={d.url}
+                target="_blank"
+                rel="noreferrer"
+                className="ani-show-img"
+              >
                 <img
                   src={d.src}
                   alt={d.name}
