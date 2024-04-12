@@ -4,10 +4,11 @@ import { BsFillPeopleFill } from "react-icons/bs";
 import { GoProject } from "react-icons/go";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import TextPlugin from "gsap/TextPlugin";
 import { useEffect } from "react";
 
 export default function About() {
-  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger, TextPlugin);
   useEffect(() => {
     let ctx = gsap.context(() => {
       gsap.from('.back-img-ani', {
@@ -90,6 +91,19 @@ export default function About() {
         delay: 1,
       })
 
+
+      gsap.from('.abt-subTxt-ani', {
+        scrollTrigger: {
+          trigger: '.ani-trigg',
+          start: "top 55%",
+          end: `+=${document.querySelector('.ani-trigg').offsetHeight + 275} 0%`,
+          toggleActions: "restart reverse restart reverse"
+        },
+        text: " ",
+        duration:1,
+        ease:'none',
+        stagger: 1
+      })
       
     });
     return () => ctx.revert();
@@ -97,8 +111,8 @@ export default function About() {
 
   return (
     <div className="main-cont contact about desktop">
-      <span>Get To Know</span>
-      <h2 style={{ marginBottom: "1em" }} className="ani-trigg">
+      <span className="abt-subTxt-ani">Get To Know</span>
+      <h2 style={{ marginBottom: "1em" }} className="ani-trigg abt-subTxt-ani">
         About Me
       </h2>
       <div className="abt-cont abt-desk-cont">

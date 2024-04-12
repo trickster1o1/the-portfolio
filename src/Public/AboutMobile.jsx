@@ -1,10 +1,11 @@
 import pp from "./qwe.jpg";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import TextPlugin from "gsap/TextPlugin";
 import { useEffect } from "react";
 
 export default function AboutMobile() {
-  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger, TextPlugin);
   useEffect(()=>{
     let ctx = gsap.context(()=> {
       gsap.from('.mob-b-ani', {
@@ -61,12 +62,25 @@ export default function AboutMobile() {
       })
     });
 
+    gsap.from('.abtMob-subTxt-ani', {
+      scrollTrigger: {
+        trigger: '.mob-ani-trig',
+        start: "top 35%",
+        end: "bottom 20%",
+        toggleActions: "restart reverse restart reverse"
+      },
+      text: " ",
+      duration:1,
+      ease:'none',
+      stagger: 1
+    })
+
     return ()=>ctx.revert();
   }, []);
   return (
     <div className="main-cont contact about mobile mob-ani-trig">
-      <span>Get To Know</span>
-      <h2 style={{ marginBottom: "1em" }}>About Me</h2>
+      <span className="abtMob-subTxt-ani">Get To Know</span>
+      <h2 style={{ marginBottom: "1em" }} className="abtMob-subTxt-ani">About Me</h2>
       <div className="abt-cont">
         <div className="pp-layer">
           <div className="front-img mob-f-ani">
