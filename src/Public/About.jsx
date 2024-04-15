@@ -129,7 +129,7 @@ export default function About() {
                 style={{ color: "rgba(98,148,185,255)" }}
               />
               Experience
-              <span>2+ Years Working</span>
+              <span>3+ Years Working</span>
             </span>
             <span className="contacts ani-cl">
               <BsFillPeopleFill
@@ -150,7 +150,7 @@ export default function About() {
           </div>
           <div className="right-bot txt-ani">
             <span>
-              I'm a recently graduated IT Student with 2 year of experience in
+              I'm a recently graduated IT Student with more than 3 years of experience in
               full stack web and android app development with React, Flutter and
               Laravel looking forward to growing my experience with other
               enthusiastic developers such as myself. <br />

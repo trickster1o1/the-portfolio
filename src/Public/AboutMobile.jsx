@@ -88,8 +88,8 @@ export default function AboutMobile() {
         </div>
         <div className="abt-layer mob-txt-ani">
           <span>
-            <p>
-              I'm a recently graduated IT Student with 2 year of experience in
+            <p style={{padding: '1em'}}>
+              I'm a recently graduated IT Student with more than 3 years of experience in
               full stack web and android app development with React, Flutter and
               Laravel looking forward to growing my experience with other
               enthusiastic developers such as myself.
@@ -102,7 +102,7 @@ export default function AboutMobile() {
             className="btn-link"
             style={{ display: "block", marginTop: "2em" }}
           >
-            <button>Let's Talk</button>
+            <button style={{marginLeft:'1em'}}>Let's Talk</button>
           </a>
         </div>
       </div>
