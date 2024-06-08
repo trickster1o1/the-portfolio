@@ -7,6 +7,7 @@ import avani from "./devs/avani.png";
 import pacific from "./devs/pacific.png";
 import rugs from "./devs/rugs.png";
 import sqc from "./devs/sqc.png";
+import honest from "./devs/honest.png";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useEffect } from "react";
@@ -93,6 +94,11 @@ export default function Works(props) {
       name: "SQC Education",
       src: sqc,
       url: "https://sqceducation.com",
+    },
+    {
+      name: "Honest Forwarder",
+      src: honest,
+      url: "https://honestforwarder.com",
     },
   ];
   return (
