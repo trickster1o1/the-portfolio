@@ -7,6 +7,8 @@ import avani from "./devs/avani.png";
 import pacific from "./devs/pacific.png";
 import rugs from "./devs/rugs.png";
 import sqc from "./devs/sqc.png";
+import aaryaTM from "./devs/aaryaTM.jpeg";
+import aaryaTravel from "./devs/aaryaTravel.png";
 import honest from "./devs/honest.png";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -99,6 +101,16 @@ export default function Works(props) {
       name: "Honest Forwarder",
       src: honest,
       url: "https://honestforwarder.com",
+    },
+    {
+      name: "Aarya Village Travel Pvt. Ltd.",
+      src: aaryaTravel,
+      url: "https://www.aaryatravel.com",
+    },
+    {
+      name: "Aarya Technology And Management",
+      src: aaryaTM,
+      url: "https://www.aaryatm.com",
     },
   ];
   return (
