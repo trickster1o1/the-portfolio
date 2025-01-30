@@ -110,7 +110,7 @@ export default function Works(props) {
     {
       name: "Aarya Technology And Management",
       src: aaryaTM,
-      url: "https://www.aaryatm.com",
+      url: "https://aaryatm.com",
     },
   ];
   return (
